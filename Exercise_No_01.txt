@@ -1,0 +1,76 @@
+Student :-Deepak Achchhelal Yadav                Roll No:-200240520031
+
+Exercise No :-01
+
+1) Create table SEMP 
+(EMPNO char(4),EMPNAME char(20), 
+BASIC float(9,2),DEPTNO char(2),
+DEPTHEAD char(4));
+
+2)Create table SDEPT
+( DEPTNO CHAR(2),
+  DEPTNAME CHAR(15)
+);
+
+3)insert into sdept values (10,'Devlopment'), (20,'Training');
+
+4) insert into semp values 
+(0001,'SUNIL',6000,10),
+(0002,'HIREN',8000,10),
+(0003,'ALI'4000,10,0001),
+(0004,'GEORGE',6000,0002));
+
+5)CREATE TABLE SUPPLIER (s# char(4),Sname varchar(20),Status int (10),city varchar(15));
+  
+  CREATE TABLE PARTS (p# char(4),Pname varchar(20),Color char (10),weight float(7,2),city varchar(15));
+   
+  create table projects (j# char(4),Jname char(10),city varchar(15));
+   
+  create Supplier_parts_projects (s# char(4),p# char(4),j# char(4),Qty int(10));
+
+insert into supplier values(('S1','Arvind',10,'Mumbai'),
+('S2','Abhi',20,'PARIS'),
+('S3','Ravi',30,'LONDON'),
+('S4','Mayur',40,'ATHENS'));
+
+
+insert into PARTS values(('P1','NUTBOLT','BLACK',20.50 'DELHI'),
+('P2','AXE','BROWN',12.50 'JAIPUR'),
+('P3','SCREW','SILVER',13.5 'VARANSI'));
+
+insert into PROJECTS values(('J1','P1','ATHENS'),
+('J2','P2','GUJRAT'),('J3','P3','LONDON'));
+
+
+
+6) Display all data from the s table,
+-> select * from supplier;
+
+7) Display only the s# and sname fields from the s table .
+->select s# ,sname from supplier;
+
+8)DISPLAY THE PNAME AND COLOR FROM THE P TABLE FOR THE CITY='LONDON'.
+-> SELECT PNAME,COLOR FROM PARTS WHERE CITY='LONDON';
+
+9)DISPLAY ALL THE SUPPLIER FROM LONDON.
+->SELECT *FROM  SUPPLIER WHERE CITY='LONDON';
+
+10)DISPLAY ALL THE SUPPLIER FROM PARIS OR ATHENS.
+->SELECT * FROM SUPPLIER WHERE CITY='PARIS' OR CITY='ATHENS';
+
+11)DISPLAY ALL THE PROJECTS IN ATHENS.
+->SELECT * FROM PROJECTS WHERE CITY ='ATHENS';
+
+12)DISPLAY ALL PARTS NAME WITH THE WEIGHT BETWEEN 12 AND 14.
+->SELECT PARTNAME FROM PARTS WHERE WEIGHT BETWEEN 12 AND 14;
+
+13)DISPLAY ALL THE SUPPLIER WITH STATUS GREATER THAN OR EQUAL TO 20.
+->SELECT *FROM SUPPLIER WHERE STATUS >= 20;
+
+14)DISPLAY ALL THE SUPPLIER EXCEPT THE SUPPLIER FROM LONDON;
+-> SELECT * FROM SUPPLIER WHERE CITY !='LONDON';
+
+15)DISPLAY ONLY THE CITIES FROM WHERE THE SUPPLIER COME FROM .
+->SELECT CITIES FROM SUPPLIER;
+
+

@@ -1,0 +1,12 @@
+ Student :-Deepak Achchhelal Yadav                Roll No:-200240520031
+
+Assignment No :-02
+
+
+1) Cnum is uniquelly identified and this is primary key of customer table.
+
+2)In customers table Rating is Fourth column in the table.
+
+3)the another name for row is 'Record','Tuple','Entity'and'Opportunity'.for column it is known as 'field','methods','Attributes'.
+
+4)Because while inserting the row in database it get random position in database server hard disk and user table store its addresses in that manner so we can not say the first five row. 

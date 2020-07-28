@@ -1,0 +1,9 @@
+ Student :-Deepak Achchhelal Yadav                Roll No:-200240520031
+
+Assignment no :-03
+
+1)Does ANSI recognize the data type date?
+->Yes it has default data type which accept in format 'YYYY-MM-DD'.
+
+2)Which subdivision of SQl is used to insert values in tables?
+->For inserting values in table the subdivision of sql is DMI which stands for Data manipulation language.
