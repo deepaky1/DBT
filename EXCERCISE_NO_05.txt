@@ -1,0 +1,61 @@
+student name :-Deepak achchhelal yadav
+roll no :- 200240520031
+
+excercise 05
+
+1)Display the Supplier name and the Quantity sold
+-> select supplier.sname, supplier_parts_project.qty
+from supplier, supplier_parts_project
+where supplier_parts_project.S# = supplier.S#;
+
+
+2)Display the Part name and Quantity sold.
+-> select parts.pname, supplier_parts_project.qty
+from parts, supplier_parts_project
+where parts.P# = supplier_parts_project.P#;
+
+
+3. Display the Project name and Quantity sold.
+-> select projects.jname, supplier_parts_project.qty
+from projects, supplier_parts_project
+where projects.J# = supplier_parts_project.J#;
+
+
+4)Display the Supplier name, Part name, Project name and Quantity sold.
+-> select supplier.sname, parts.pname, projects.jname, supplier_parts_project.qty
+from parts, supplier, projects, supplier_parts_project
+where supplier_parts_project.J# = projects.J#
+and supplier_parts_project.S# = supplier.S#
+and supplier_parts_project.P# = parts.P#;
+
+
+5)Display the Supplier name, Supplying Parts to a Project in the same City.
+-> select distinct supplier.sname from supplier, projects where supplier.city=projects.city;
+
+
+6)Display the Part name that is ‘Red’ is color, and the Quantity sold.
+-> select parts.pname, supplier_parts_project.qty, parts.color from parts, supplier_parts_project where parts.P#=supplier_parts_project.P# and parts.color='Red';
+
+
+7)Display all the Quantity sold by Suppliers with the Status = 20.
+->select supplier.status, supplier_parts_project.qty
+from supplier, supplier_parts_project
+where supplier.S#=supplier_parts_project.S# and supplier.status=20;
+
+8)Display all the Parts and Quantity with a Weight > 14.
+-> select parts.pname, supplier_parts_project.qty
+from parts, supplier_parts_project
+where parts.P#=supplier_parts_project.P# and parts.weight > 14;
+
+9)Display all the Project names and City, which has bought more than 500 Parts.
+-> select projects.jname, projects.city, supplier_parts_project.qty
+from projects, supplier_parts_project
+where projects.J#=supplier_parts_project.J# and supplier_parts_project.qty > 500;
+
+10)Display all the Part names and Quantity sold that have a Weight less than 15.
+-> select parts.pname, parts.weight, supplier_parts_project.qty
+from parts, supplier_parts_project
+where parts.P#=supplier_parts_project.P# and parts.weight < 15;
+
+11)Display all the Employee names and the name of their Managers
+-> select e1.empname as employee, e2.empname as MANAGER from semp e1, semp e2 where e1.depthead = e2.empno;

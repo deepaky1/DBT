@@ -1,0 +1,14 @@
+student name :-Deepak achchhelal yadav
+roll no:- 200240520031
+
+Assingnment no:-10
+
+
+
+1)Write a query that produces all pairs of salespeople who are living in the same city. Exclude combinations of salespeople with themselves as well as duplicate rows with the order reversed.
+-> select distinct s1.sname ,s2.sname frpm salespeople s1,salespeople s2
+   where s1.sname > s2.sname and s1.city=s2.city;
+
+2)Write a query that produces the names and cities of all customers with the same rating as Hoffman.
+-> select c1.rating, c1.cname , c2.city from customers c1, customers c2
+   where c1.rating=c2.rating group by c1.cname having c1.rating = (select rating from customers where cname='Hoffman'); 

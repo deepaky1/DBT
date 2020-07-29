@@ -1,0 +1,21 @@
+student name :-Deepak achchhelal yadav
+Roll no:-200240520031
+ Asssignment No:-07
+
+1)Write a query that counts all orders for October 3.
+-> select count(*) from orders where odate='1990-10-03';
+
+2)Write a query that counts the number of different non-NULL city values in the Customers table.
+-> select count(distinct(city)) from customers where city is not null;
+
+3)Write a query that selects each customer’s smallest order.
+-> select min(amt) from orders group by cnum;
+
+4)Write a query that selects the first customer, in alphabetical order, whose name begins with G.
+-> select cname from customers where cname like 'G%' order by cname limit 1;
+
+5)Write a query that selects the highest rating in each city.
+-> select city, max(rating) from customers group by city;
+
+6)Write a query that counts the number of salespeople registering orders for each day. 
+->select count(distinct(odate)), odate from orders group by odate;
