@@ -1,0 +1,25 @@
+Student Name:-Deepak Achchhelal Yadav
+Roll No:-200240520031
+Assignment No:-12
+
+
+1) Write a query that selects all customers whose ratings are equal to or greater than 
+ANY of Serres’. 
+->SELECT CNAME , RATEING FROM CUSTOMER	
+  WHERE RATEING >= ANY (SELECT RATEING FROM CUSTOMER WHERE SNUM IN (
+  SELECT SNUM FROM SALESPEOPLE WHERE SNAME = 'SERRES'));
+
+
+
+2) Write a query using ANY or ALL that will find all salespeople who have no 
+customers located in their city.
+->SELECT SNAME FROM SALESPEOPLE 
+  WHERE CITY = ANY( SELECT CITY FROM CUSTOMER);
+
+3) Write a query that selects all orders for amounts greater than any for the 
+customers in London. 
+-> SELECT * FROM ORDERS 
+   WHERE AMT >= ANY( SELECT O.AMT FROM ORDERS WHERE O.CNUM IN (
+   SELECT CNUM FROM CUSTOMER WHERE CITY = 'LONDON'));
+
+

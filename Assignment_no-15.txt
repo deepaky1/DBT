@@ -1,0 +1,19 @@
+Student name:- Deepak Achchhelal Yadav
+Roll No:-200240520031
+
+Assignment no :-15
+
+1)Assume there is a table called Multicust, with all of the same column definitions as Salespeople. Write a command that inserts all salespeople with more than one customer into this table.
+-> create table multicast AS
+select * from salespeople Where snum In
+(select snum from customers group by snum Having Count(snum) > 1);
+
+
+2)Write a command that deletes all customers with no current orders.
+-> Delet From customers Where cnum
+   Not In (Select DISTINCT cnum From orders);
+
+3) Write a command that increases by twenty percent the commissions of all salespeople with total orders above Rs. 3,000.
+-> update salespeople set comm = (comm + comm*0.20)
+Where snum In
+(Select snum From orders Group by snum HAVING SUM(amt)>3000);

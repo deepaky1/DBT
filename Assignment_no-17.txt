@@ -1,0 +1,34 @@
+Student Name :-Deepak Achchhelal Yadav
+Roll No :-200240520031
+
+Assignment No:-17
+
+
+
+1)Create the Orders table so that all onum values as well as all combinations of cnum and snum are different from one another, and so that NULL values are excluded from the date field.
+-> Create table order_latest (
+onum int,
+cnum int,
+snum int,
+odate Date Not Null,
+CONSTRAINT pk_orders Primary key (onum,cnum,snum)
+);
+
+
+2)Create the Salespeople table so that the default commission is 10% with no NULLS permitted, snum is the primary key, and all names fall alphabetically between A and M, inclusive (assume all names will be uppercase).
+-> Create table salespeople_latest ( snum int Primary key,
+sname Varchar(20) Check(Substr(Upper(sname),1,1) between 'A' and 'M'),
+city Varchar(10) ,
+comm float(7,2) NOT NULL Default 0.10
+);
+
+
+3)Create the Orders table, making sure that the onum is greater than the cnum, and the cnum is greater that the snum. Allow no NULLS in any of these three fields.
+-> Create table order_updated(
+onum int Not Null,
+cnum int Not null ,
+snum int Not Null ,
+odate DATE,
+amt FLOAT(6,2),
+CONSTRAINT con_nums CHECK (onum > cnum AND cnum>snum)
+);

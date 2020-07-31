@@ -1,0 +1,20 @@
+STUDENT NAME DEEPAK ACHCHHELAL YADAV
+200240520031
+ASSIGNMENT NO:-19
+
+1) Create a view that shows all of the customers who have the highest ratings.
+->CREATE VIEW FIRST AS
+  SELECT CNUM FROM CUSTOMER 
+  WHERE RATEING = (SELECT MAX(RATEING) FROM CUSTOMER);
+			
+2) Create a view that shows the number of salespeople in each city.
+-> CREATE VIEW SECOND AS
+   SELECT SNUM , COUNT(SNUM) , CITY
+   FROM SALESPEOPLE GROUP BY CITY;
+
+3) Create a view that shows the average and total orders for each salesperson after 
+his or her name. Assume all names are unique.
+->CREATE VIEW THIRD AS
+  SELECT  S.SNAME , SUM(O.AMT) , AVG(O.AMT)
+  FROM ORDERS O , SALESPEOPLE WHERE S.SNUM = O.SNUM
+  GROUP BY SNAME;
